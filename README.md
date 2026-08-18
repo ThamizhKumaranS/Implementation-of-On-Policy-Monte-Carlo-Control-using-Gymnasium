@@ -310,19 +310,23 @@ Average reward over last 1000 episodes:
 ---
 
 ## Result
-```text
 
+The On-Policy Monte Carlo Control algorithm was successfully implemented using Gymnasium's FrozenLake-v1 environment. The agent learned an improved policy using Monte Carlo returns and an epsilon-greedy strategy
 
-
-```
 ---
 
 ## Inference
-```text
 
+The agent initially performs more exploration because the epsilon value starts at 1.0. As the number of training episodes increases, epsilon decreases toward the minimum value of 0.05.
 
+The Monte Carlo algorithm calculates the return from complete episodes and uses these returns to update the Q-values.
 
-```
+The learned Q-table represents the estimated value of taking each action in every state. The state-value function is obtained by selecting the maximum Q-value for each state.
+
+The epsilon-greedy policy allows the agent to explore different actions initially and gradually exploit the actions that provide higher estimated returns.
+
+The learning curve shows the change in the average reward as the number of training episodes increases.
+
 
 
 
